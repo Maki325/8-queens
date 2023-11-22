@@ -1,8 +1,5 @@
 import { calculateAttacks } from "./common";
-import type { InitialStateId } from "./initialState";
 import type { Move, Position, State } from "./state";
-
-export type HillClimbingId = 'onlyMoveInRow';
 
 export class HillClimbingOptions {
   constructor(
@@ -10,8 +7,6 @@ export class HillClimbingOptions {
     public readonly maxSidemoves: number,
   ) {}
 }
-
-export type HillClimbingFunction = (options: HillClimbingOptions) => HillClimbingResult;
 
 export class HillClimbingResult {
   constructor(
@@ -103,18 +98,3 @@ export function moveOnlyInRow({maxSidemoves = 100, startState}: HillClimbingOpti
 
   return new HillClimbingResult(currentState, moves);
 }
-
-type Version = {
-  id: HillClimbingId;
-  name: string;
-  func: HillClimbingFunction;
-  usableInitialStateFilter?: InitialStateId[];
-}
-export const versions: Version[] = [
-  {
-    id: 'onlyMoveInRow',
-    name: 'Only move queens in the same row',
-    func: moveOnlyInRow,
-    usableInitialStateFilter: ['queenInEachRow']
-  },
-];

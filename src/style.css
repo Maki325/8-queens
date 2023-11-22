@@ -89,38 +89,6 @@ button:focus-visible {
   height: calc(var(--square-size) * 8);
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  height: var(--square-size);
-  --square-color: #ffffff;
-  --square-color-other: #000000;
-}
-
-.row:nth-child(even) {
-  --square-color: #000000;
-  --square-color-other: #ffffff;
-}
-
-.square {
-  background-color: var(--square-color);
-  width: var(--square-size);
-  height: var(--square-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.square:nth-child(even) {
-  background-color: var(--square-color-other);
-}
-
-
-.queen {
-  width: 90%;
-  height: 90%;
-}
-
-
 #menu {
   display: flex;
   flex-direction: row;
