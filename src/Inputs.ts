@@ -1,5 +1,5 @@
 export default class Inputs {
-  private timestepValue = 25;
+  private timestepValue = 250;
 
   constructor(
     private readonly timestepEl: HTMLInputElement,

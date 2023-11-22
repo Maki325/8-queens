@@ -36,10 +36,6 @@ export default class Board {
 
     this.inputs.generate.addEventListener('click', this.regenerateBoard);
     this.inputs.start.addEventListener('click', this.start);
-
-    (document.getElementById('nextBtn') as HTMLInputElement).onclick = () => {
-      this.draw(this.drawId);
-    }
   }
 
   private initBoard() {
