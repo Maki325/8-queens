@@ -18,12 +18,25 @@
         <div id="controls">
           <button id="generateBtn">Generate</button>
           <button id="startBtn">Start</button>
+          <button id="statisticsBtn">Statistics</button>
         </div>
       </div>
       <div id="boardContainer">
-        <canvas id="board"></canvas>
-        <h1 id="status">Generated</h1>
-        <h4 id="moreInfo"></h4>
+        <div id="boardPart">
+          <canvas id="board"></canvas>
+          <h1 id="status">Generated</h1>
+          <h4 id="moreInfo"></h4>
+        </div>
+
+        <div id="statisticsContainer" data-visible="false">
+          <h1 id="statisticsStatus">Loading...</h1>
+          <h4 id="statisticsMoreInfo">x/200</h4>
+          <h3 data-visible="false" id="statisticsNumberOfSuccesses">Number of successes: 25</h3>
+          <h3 data-visible="false" id="statisticsNumberOfFails">Number of successes: 175</h3>
+          <h3 data-visible="false" id="statisticsPercentSuccess">Successes percentage: 12.5%</h3>
+          <h3 data-visible="false" id="statisticsAverageSidesteps">Average number of secondary steps: 12 per round</h3>
+          <h3 data-visible="false" id="statisticsWinsWithNoSidesteps">Number of wins without secondary steps: 12</h3>
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

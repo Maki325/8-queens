@@ -17,6 +17,8 @@ export class HillClimbingResult {
   constructor(
     public readonly state: State,
     public readonly moves: Move[],
+    public readonly sideMoves: number,
+    public readonly numberOfAttacks: number,
   ) {}
 }
 
@@ -101,7 +103,7 @@ export function moveOnlyInRow({maxSidemoves = 100, startState}: HillClimbingOpti
     }
   }
 
-  return new HillClimbingResult(currentState, moves);
+  return new HillClimbingResult(currentState, moves, sideMoves, calculateAttacks(currentState));
 }
 
 type Version = {

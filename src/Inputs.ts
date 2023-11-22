@@ -5,6 +5,7 @@ export default class Inputs {
     private readonly timestepEl: HTMLInputElement,
     public readonly generate: HTMLInputElement,
     public readonly start: HTMLInputElement,
+    public readonly statistics: HTMLInputElement,
   ) {
     this.timestepEl.addEventListener('change', (e) => {
       const value = (e.target as HTMLInputElement).value;

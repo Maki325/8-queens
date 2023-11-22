@@ -23,7 +23,7 @@ export default class Board {
     private readonly canvas: HTMLCanvasElement,
     private readonly status: HTMLHeadingElement,
     private readonly moreInfo: HTMLHeadingElement,
-    private inputs: Inputs
+    private inputs: Inputs,
   ) {
     this.ctx = this.canvas.getContext('2d')!;
 
